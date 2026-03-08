@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: var(--bg-color);
+  --color-primary: var(--primary-color);
+  --color-secondary: var(--secondary-color);
+  --color-accent: var(--accent-color);
+  --color-text: var(--text-color);
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --font-sans: "Inter", "Roboto", "Outfit", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+@layer base {
+  :root {
+    --bg-color: #F4F3EE;
+    /* Parchment */
+    --primary-color: #463F3A;
+    /* Taupe - High Contrast for buttons/accents */
+    --secondary-color: #8A817C;
+    /* Grey Olive - Medium Contrast */
+    --accent-color: #E0AFA0;
+    /* Powder Blush - Accent */
+    --text-color: #463F3A;
+    /* Taupe - Main Text */
+    --border-color-light: #BCB8B1;
+    /* Silver - Borders */
+  }
+
+  .dark {
+    --bg-color: #102542;
+    /* Prussian Blue */
+    --primary-color: #f87060;
+    /* Vibrant Coral */
+    --secondary-color: #cdd7d6;
+    /* Dust Grey */
+    --accent-color: #b3a394;
+    /* Khaki Beige */
+    --text-color: #ffffff;
+    /* White text */
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background-color: rgba(188, 184, 177, 0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(70, 63, 58, 0.1);
+  }
+
+  .dark .glass {
+    background-color: rgba(205, 215, 214, 0.1);
+    /* Dust Grey glass base */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px 2px rgba(138, 129, 124, 0.3);
+    /* Grey Olive glow */
+  }
+
+  .dark .glow-green {
+    box-shadow: 0 0 20px 2px rgba(248, 112, 96, 0.3);
+    /* Vibrant Coral glow */
+  }
+
+  .glow-violet {
+    box-shadow: 0 0 20px 2px rgba(188, 184, 177, 0.3);
+    /* Silver glow */
+  }
+
+  .dark .glow-violet {
+    box-shadow: 0 0 20px 2px rgba(205, 215, 214, 0.3);
+    /* Dust Grey glow */
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 20px 2px rgba(224, 175, 160, 0.3);
+    /* Powder Blush glow */
+  }
+
+  .dark .glow-orange {
+    box-shadow: 0 0 20px 2px rgba(179, 163, 148, 0.3);
+    /* Khaki Beige glow */
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
