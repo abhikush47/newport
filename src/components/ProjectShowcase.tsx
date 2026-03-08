@@ -10,7 +10,6 @@ import {
 import {
   X,
   ExternalLink,
-  Github,
   Zap,
   Layers,
   Globe,
