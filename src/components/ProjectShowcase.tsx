@@ -73,7 +73,7 @@ metrics: [
 
 {
 id: 3,
-title: "Ruden Fitness- Elite PT Website",
+title: "Ruden Fitness- Elite Personal Training Platform",
 color: "#8B5CF6",
 mockup: ruden,
 link: "https://ruden.vercel.app/",
