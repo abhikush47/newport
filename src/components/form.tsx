@@ -1,4 +1,4 @@
-import { Mail, Phone, Instagram, MapPin } from "lucide-react";
+import { Mail, Phone, Instagram, MapPin, MessageCircle } from "lucide-react";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
@@ -13,23 +13,19 @@ const [loading,setLoading] = useState(false);
 const [services,setServices] = useState<string[]>([]);
 
 const toggleService = (service:string) => {
-
 setServices(prev =>
 prev.includes(service)
 ? prev.filter(s => s !== service)
 : [...prev,service]
 );
-
 };
 
 const fireConfetti = () => {
-
 confetti({
 particleCount:120,
 spread:70,
 origin:{y:0.6}
 });
-
 };
 
 const sendEmail = (e:any) => {
@@ -88,6 +84,8 @@ Tell me about your project or collaboration idea.
 
 <div className="space-y-8">
 
+{/* EMAIL */}
+
 <div className="flex gap-4">
 <Mail className="text-yellow-400"/>
 <div>
@@ -95,6 +93,8 @@ Tell me about your project or collaboration idea.
 <p className="text-white">abhi.kush047@gmaiil.com</p>
 </div>
 </div>
+
+{/* PHONE */}
 
 <div className="flex gap-4">
 <Phone className="text-yellow-400"/>
@@ -104,6 +104,8 @@ Tell me about your project or collaboration idea.
 </div>
 </div>
 
+{/* INSTAGRAM */}
+
 <div className="flex gap-4">
 <Instagram className="text-yellow-400"/>
 <div>
@@ -112,6 +114,8 @@ Tell me about your project or collaboration idea.
 </div>
 </div>
 
+{/* LOCATION */}
+
 <div className="flex gap-4">
 <MapPin className="text-yellow-400"/>
 <div>
@@ -119,6 +123,28 @@ Tell me about your project or collaboration idea.
 <p className="text-white">Bhubaneswar, India</p>
 </div>
 </div>
+
+{/* WHATSAPP CARD */}
+
+<a
+href="https://wa.me/9779749939797"
+target="_blank"
+className="flex items-center gap-4 border border-green-500/40 p-5 rounded-xl hover:bg-green-500/10 transition w-full"
+>
+
+<MessageCircle className="text-green-400" size={28}/>
+
+<div>
+<p className="text-white font-semibold">
+Chat on WhatsApp
+</p>
+
+<p className="text-sm text-gray-400">
+Quick response guaranteed
+</p>
+</div>
+
+</a>
 
 </div>
 
@@ -137,8 +163,6 @@ Fill out the form and I'll get back to you soon.
 </p>
 
 <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
-
-{/* hidden field for services */}
 
 <input
 type="hidden"
