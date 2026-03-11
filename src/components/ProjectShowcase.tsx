@@ -18,7 +18,7 @@ import {
 
 import lwangblack from "../assets/lwangblack.png";
 import roy from "../assets/roy.png";
-import ipl from "../assets/ipl.png";
+import ruden from "../assets/ruden.png";
 
 const projects = [
 {
@@ -73,25 +73,25 @@ metrics: [
 
 {
 id: 3,
-title: "IPL Prediction Website",
+title: "Ruden Fitness- Elite PT Website",
 color: "#8B5CF6",
-mockup: ipl,
-link: "https://ipllive-miniproject.vercel.app",
+mockup: ruden,
+link: "https://ruden.vercel.app/",
 
-tags: ["SPORTS","DATA","WEB APP"],
+tags: ["PT","SAAS","WEB APP"],
 
 description:
-"A sports analytics platform providing IPL match predictions.",
+"A fitness platform for elite personal training services.",
 
 problem:
-"Cricket fans needed an easy interface to view IPL match predictions and insights.",
+"Fitness enthusiasts needed an easy interface to access personalized training programs and track their progress.",
 
 architecture:
-"Built a web dashboard analyzing historical IPL data to generate predictions.",
+"Built a web dashboard analyzing user data to generate customized training plans.",
 
 metrics: [
-"Data-driven predictions",
-"Interactive sports dashboard",
+"Data-driven training plans",
+"Interactive fitness dashboard",
 "Clean analytics interface"
 ]
 }
