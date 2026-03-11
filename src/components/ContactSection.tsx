@@ -335,7 +335,7 @@ that help businesses scale faster.
             </motion.div>
 
             <footer className="w-full mt-32 border-t border-text/10 dark:border-zinc-800 pt-8 pb-4 text-center text-gray-500 text-sm z-10 transition-colors duration-300">
-                <p>© {new Date().getFullYear()} Abhishek Kushwaha. Built with React, Tailwind & Framer Motion.</p>
+                
             </footer>
         </section>
     );

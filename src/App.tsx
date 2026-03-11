@@ -7,6 +7,7 @@ import { WhatIShipSection } from './components/WhatIShipSection';
 import { TechStack } from './components/TechStack';
 import { ContactSection } from './components/ContactSection';
 import { BlogSection } from "./components/BlogSection";
+import { Form } from "./components/form";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <WhatIShipSection />
       <TechStack />
       <ContactSection />
+      <Form />
     </Layout>
   );
 }
