@@ -6,6 +6,7 @@ import { ProjectShowcase } from './components/ProjectShowcase';
 import { WhatIShipSection } from './components/WhatIShipSection';
 import { TechStack } from './components/TechStack';
 import { ContactSection } from './components/ContactSection';
+import { BlogSection } from "./components/BlogSection";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ArchitectureFlow />
       <ComposeSection />
       <ProjectShowcase />
+      <BlogSection />
       <WhatIShipSection />
       <TechStack />
       <ContactSection />
