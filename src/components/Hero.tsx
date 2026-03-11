@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
-import resumePdf from '../assets/Abhishek Kushwaha.pdf';
+import resumePdf from '../assets/Abhishek Resume.pdf';
 
 gsap.registerPlugin(ScrollTrigger);
 
